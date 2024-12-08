@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eczar:wght@400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+.product-details-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eae0d5;
+  letter-spacing: 2px;
+  justify-content: center;
+
+  .title {
+    margin-bottom: 60px;
+  }
+
+  .product-details-container__table {
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.26);
+    font-family: "Eczar", serif;
+    transition: font-size 0.6s ease;
+
+    .product-details-container--no-entries {
+      height: 200px;
+      td {
+        text-align: center;
+      }
+    }
+
+    .product-details-container__table__row__header {
+      height: 110px;
+      background-color: #8a7968;
+      th {
+        width: 1%;
+      }
+    }
+    .product-details-container__table__row__details {
+      height: 50px;
+      background-color: #ccc5b9;
+      transition: height 0.25s linear;
+      border-color: #96d4d4;
+      border-collapse: collapse;
+    }
+    .product-details-container__table__row__details--even {
+      background-color: #ab947e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.26);
+    }
+    .product-details-container__table__row__details:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.6s ease;
+    }
+  }
+  .product-details-container__pagination {
+    /* width: 200px; */
+    transition: width 0.6s ease;
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .product-details-container {
+    font-size: 11px;
+    transition: font-size 0.6s ease;
+    .product-details-container__pagination {
+      width: 200px;
+    }
+  }
+}
