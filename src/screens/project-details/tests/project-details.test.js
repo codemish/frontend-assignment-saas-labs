@@ -73,7 +73,7 @@ describe("ProjectDetails Component", () => {
     render(<ProjectDetails />);
 
     expect(
-      screen.getByText(/Error While Loading the projects/i)
+      screen.getByText("Error While Loading the projects")
     ).toBeInTheDocument();
   });
 });
